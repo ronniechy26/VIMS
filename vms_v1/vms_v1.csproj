@@ -1,0 +1,999 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{99123A9B-AAB8-4CB7-8022-E37428673A02}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>vms_v1</RootNamespace>
+    <AssemblyName>vms_v1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>2_vHC_1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Bunifu Technologies\Bunifu Framework Manager\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="CRVsPackageLib, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.TemplateEngine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataSetConversion, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.VSDesigner, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\..\Desktop\itextsharp\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.15.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tulpep.NotificationWindow, Version=1.1.25.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tulpep.NotificationWindow.1.1.25\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLASS\auditTrail.cs" />
+    <Compile Include="CLASS\DBAccess.cs" />
+    <Compile Include="CLASS\DBConnection.cs" />
+    <Compile Include="CLASS\extensionVol.cs" />
+    <Compile Include="CLASS\Functions.cs" />
+    <Compile Include="CLASS\history.cs" />
+    <Compile Include="CLASS\hostOrg.cs" />
+    <Compile Include="CLASS\hostProjects.cs" />
+    <Compile Include="CLASS\institutionTypeMain.cs" />
+    <Compile Include="CLASS\institutionTypeSUB.cs" />
+    <Compile Include="CLASS\Ivso.cs" />
+    <Compile Include="CLASS\loginInformation.cs" />
+    <Compile Include="CLASS\reports.cs" />
+    <Compile Include="CLASS\request.cs" />
+    <Compile Include="CLASS\requestSub.cs" />
+    <Compile Include="CLASS\sector.cs" />
+    <Compile Include="CLASS\specialization.cs" />
+    <Compile Include="CLASS\specializationSub.cs" />
+    <Compile Include="CLASS\volunteer.cs" />
+    <Compile Include="DATASETS\LPI.cs">
+      <DependentUpon>LPI.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASETS\LPI.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LPI.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASETS\projects.cs">
+      <DependentUpon>projects.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASETS\projects.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>projects.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASETS\vol_age_range.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vol_age_range.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASETS\vol_ivso.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vol_ivso.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASETS\vol_lpi_type.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vol_lpi_type.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASETS\vol_reg.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vol_reg.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASETS\vol_sector.cs">
+      <DependentUpon>vol_sector.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASETS\vol_sector.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vol_sector.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASETS\vol_sex.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vol_sex.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_auditTrail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_auditTrail.Designer.cs">
+      <DependentUpon>frm_auditTrail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_dashboard.Designer.cs">
+      <DependentUpon>frm_dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_extension.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_extension.Designer.cs">
+      <DependentUpon>frm_extension.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_hostOrg_hstry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_hostOrg_hstry.Designer.cs">
+      <DependentUpon>frm_hostOrg_hstry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_HstOrgnztnInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_HstOrgnztnInfo.Designer.cs">
+      <DependentUpon>frm_HstOrgnztnInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_login_password_recovery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_login_password_recovery.Designer.cs">
+      <DependentUpon>frm_login_password_recovery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_manage_ivso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_manage_ivso.Designer.cs">
+      <DependentUpon>frm_manage_ivso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_manage_org_type.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_manage_org_type.Designer.cs">
+      <DependentUpon>frm_manage_org_type.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_manage_org_type_SUB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_manage_org_type_SUB.Designer.cs">
+      <DependentUpon>frm_manage_org_type_SUB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_manage_sector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_manage_sector.Designer.cs">
+      <DependentUpon>frm_manage_sector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_manage_specialization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_manage_specialization.Designer.cs">
+      <DependentUpon>frm_manage_specialization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_manage_specializationSUB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_manage_specializationSUB.Designer.cs">
+      <DependentUpon>frm_manage_specializationSUB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_notication_table.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_notication_table.Designer.cs">
+      <DependentUpon>frm_notication_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_host_org2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_host_org2.Designer.cs">
+      <DependentUpon>frm_pop_up_host_org2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_in_rpt_vol_act\frm_lpi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_in_rpt_vol_act\frm_lpi.Designer.cs">
+      <DependentUpon>frm_lpi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_in_rpt_vol_act\frm_proj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_in_rpt_vol_act\frm_proj.Designer.cs">
+      <DependentUpon>frm_proj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_in_rpt_vol_act\frm_proj_RFV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_in_rpt_vol_act\frm_proj_RFV.Designer.cs">
+      <DependentUpon>frm_proj_RFV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_in_rpt_vol_act\frm_vol_org.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_in_rpt_vol_act\frm_vol_org.Designer.cs">
+      <DependentUpon>frm_vol_org.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_org.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_org.Designer.cs">
+      <DependentUpon>frm_pop_up_org.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_project.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_project.Designer.cs">
+      <DependentUpon>frm_pop_up_project.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_reports\frm_LPI_per_orgtype_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_reports\frm_LPI_per_orgtype_main.Designer.cs">
+      <DependentUpon>frm_LPI_per_orgtype_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_reports\frm_LPI_per_province.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_reports\frm_LPI_per_province.Designer.cs">
+      <DependentUpon>frm_LPI_per_province.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_reports\frm_LPI_per_region.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_reports\frm_LPI_per_region.Designer.cs">
+      <DependentUpon>frm_LPI_per_region.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_reports\frm_RFV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_reports\frm_RFV.Designer.cs">
+      <DependentUpon>frm_RFV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_reports\frm_volunteer_act_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_reports\frm_volunteer_act_.Designer.cs">
+      <DependentUpon>frm_volunteer_act_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_volunteer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_volunteer.Designer.cs">
+      <DependentUpon>frm_pop_up_volunteer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_vol_org.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_pop_up_vol_org.Designer.cs">
+      <DependentUpon>frm_pop_up_vol_org.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_projects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_projects.Designer.cs">
+      <DependentUpon>frm_projects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_recyclebin_hostorg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_recyclebin_hostorg.Designer.cs">
+      <DependentUpon>frm_recyclebin_hostorg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_recyclebin_request.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_recyclebin_request.Designer.cs">
+      <DependentUpon>frm_recyclebin_request.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_recyclebin_req_sub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_recyclebin_req_sub.Designer.cs">
+      <DependentUpon>frm_recyclebin_req_sub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_recyclebin_volunteer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_recyclebin_volunteer.Designer.cs">
+      <DependentUpon>frm_recyclebin_volunteer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_request.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_request.Designer.cs">
+      <DependentUpon>frm_request.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_request_sub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_request_sub.Designer.cs">
+      <DependentUpon>frm_request_sub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_rptviewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_rptviewer.Designer.cs">
+      <DependentUpon>frm_rptviewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_user_account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_user_account.Designer.cs">
+      <DependentUpon>frm_user_account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_user_management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_user_management.Designer.cs">
+      <DependentUpon>frm_user_management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_volunteer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_volunteer.Designer.cs">
+      <DependentUpon>frm_volunteer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frm_volunteer_hstry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frm_volunteer_hstry.Designer.cs">
+      <DependentUpon>frm_volunteer_hstry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\loading_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\loading_.Designer.cs">
+      <DependentUpon>loading_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REPORTS\rpt_LPI.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_LPI.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\rpt_projects.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_projects.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\rpt_vol_age_range.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_vol_age_range.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\rpt_vol_ivso.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_vol_ivso.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\rpt_vol_lpi_type.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_vol_lpi_type.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\rpt_vol_reg.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_vol_reg.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\rpt_vol_sector.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_vol_sector.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTS\rpt_vol_sex.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_vol_sex.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="USERCONTROLS\GnrtRprt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USERCONTROLS\GnrtRprt.Designer.cs">
+      <DependentUpon>GnrtRprt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USERCONTROLS\HstOrgnztnInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USERCONTROLS\HstOrgnztnInfo.Designer.cs">
+      <DependentUpon>HstOrgnztnInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USERCONTROLS\maintenance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USERCONTROLS\maintenance.Designer.cs">
+      <DependentUpon>maintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USERCONTROLS\requestForVolunteer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USERCONTROLS\requestForVolunteer.Designer.cs">
+      <DependentUpon>requestForVolunteer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USERCONTROLS\VolunteerInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USERCONTROLS\VolunteerInfo.Designer.cs">
+      <DependentUpon>VolunteerInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FORMS\frm_auditTrail.resx">
+      <DependentUpon>frm_auditTrail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_dashboard.resx">
+      <DependentUpon>frm_dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_extension.resx">
+      <DependentUpon>frm_extension.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_hostOrg_hstry.resx">
+      <DependentUpon>frm_hostOrg_hstry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_HstOrgnztnInfo.resx">
+      <DependentUpon>frm_HstOrgnztnInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_login_password_recovery.resx">
+      <DependentUpon>frm_login_password_recovery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_manage_ivso.resx">
+      <DependentUpon>frm_manage_ivso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_manage_org_type.resx">
+      <DependentUpon>frm_manage_org_type.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_manage_org_type_SUB.resx">
+      <DependentUpon>frm_manage_org_type_SUB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_manage_sector.resx">
+      <DependentUpon>frm_manage_sector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_manage_specialization.resx">
+      <DependentUpon>frm_manage_specialization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_manage_specializationSUB.resx">
+      <DependentUpon>frm_manage_specializationSUB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_notication_table.resx">
+      <DependentUpon>frm_notication_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_pop_up_host_org2.resx">
+      <DependentUpon>frm_pop_up_host_org2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_pop_up_in_rpt_vol_act\frm_lpi.resx">
+      <DependentUpon>frm_lpi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_pop_up_in_rpt_vol_act\frm_proj.resx">
+      <DependentUpon>frm_proj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_pop_up_in_rpt_vol_act\frm_proj_RFV.resx">
+      <DependentUpon>frm_proj_RFV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_pop_up_in_rpt_vol_act\frm_vol_org.resx">
+      <DependentUpon>frm_vol_org.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_pop_up_org.resx">
+      <DependentUpon>frm_pop_up_org.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_pop_up_project.resx">
+      <DependentUpon>frm_pop_up_project.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_pop_up_reports\frm_LPI_per_orgtype_main.resx">
+      <DependentUpon>frm_LPI_per_orgtype_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_pop_up_reports\frm_LPI_per_province.resx">
+      <DependentUpon>frm_LPI_per_province.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_pop_up_reports\frm_LPI_per_region.resx">
+      <DependentUpon>frm_LPI_per_region.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_pop_up_reports\frm_RFV.resx">
+      <DependentUpon>frm_RFV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_pop_up_reports\frm_volunteer_act_.resx">
+      <DependentUpon>frm_volunteer_act_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_pop_up_volunteer.resx">
+      <DependentUpon>frm_pop_up_volunteer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_pop_up_vol_org.resx">
+      <DependentUpon>frm_pop_up_vol_org.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_projects.resx">
+      <DependentUpon>frm_projects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_recyclebin_hostorg.resx">
+      <DependentUpon>frm_recyclebin_hostorg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_recyclebin_request.resx">
+      <DependentUpon>frm_recyclebin_request.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_recyclebin_req_sub.resx">
+      <DependentUpon>frm_recyclebin_req_sub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_recyclebin_volunteer.resx">
+      <DependentUpon>frm_recyclebin_volunteer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_request.resx">
+      <DependentUpon>frm_request.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_request_sub.resx">
+      <DependentUpon>frm_request_sub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_rptviewer.resx">
+      <DependentUpon>frm_rptviewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_user_account.resx">
+      <DependentUpon>frm_user_account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_user_management.resx">
+      <DependentUpon>frm_user_management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_volunteer.resx">
+      <DependentUpon>frm_volunteer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frm_volunteer_hstry.resx">
+      <DependentUpon>frm_volunteer_hstry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\loading_.resx">
+      <DependentUpon>loading_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="REPORTS\rpt_LPI.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_LPI.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\rpt_projects.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_projects.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\rpt_vol_age_range.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_vol_age_range.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\rpt_vol_ivso.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_vol_ivso.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\rpt_vol_lpi_type.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_vol_lpi_type.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\rpt_vol_reg.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_vol_reg.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\rpt_vol_sector.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_vol_sector.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\rpt_vol_sex.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_vol_sex.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USERCONTROLS\GnrtRprt.resx">
+      <DependentUpon>GnrtRprt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USERCONTROLS\HstOrgnztnInfo.resx">
+      <DependentUpon>HstOrgnztnInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USERCONTROLS\maintenance.resx">
+      <DependentUpon>maintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USERCONTROLS\requestForVolunteer.resx">
+      <DependentUpon>requestForVolunteer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USERCONTROLS\VolunteerInfo.resx">
+      <DependentUpon>VolunteerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="DATASETS\LPI.xsc">
+      <DependentUpon>LPI.xsd</DependentUpon>
+    </None>
+    <None Include="DATASETS\LPI.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LPI.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATASETS\LPI.xss">
+      <DependentUpon>LPI.xsd</DependentUpon>
+    </None>
+    <None Include="DATASETS\projects.xsc">
+      <DependentUpon>projects.xsd</DependentUpon>
+    </None>
+    <None Include="DATASETS\projects.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>projects.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATASETS\projects.xss">
+      <DependentUpon>projects.xsd</DependentUpon>
+    </None>
+    <None Include="DATASETS\vol_age_range.xsc">
+      <DependentUpon>vol_age_range.xsd</DependentUpon>
+    </None>
+    <None Include="DATASETS\vol_age_range.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vol_age_range.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATASETS\vol_age_range.xss">
+      <DependentUpon>vol_age_range.xsd</DependentUpon>
+    </None>
+    <None Include="DATASETS\vol_ivso.xsc">
+      <DependentUpon>vol_ivso.xsd</DependentUpon>
+    </None>
+    <None Include="DATASETS\vol_ivso.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vol_ivso.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATASETS\vol_ivso.xss">
+      <DependentUpon>vol_ivso.xsd</DependentUpon>
+    </None>
+    <None Include="DATASETS\vol_lpi_type.xsc">
+      <DependentUpon>vol_lpi_type.xsd</DependentUpon>
+    </None>
+    <None Include="DATASETS\vol_lpi_type.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vol_lpi_type.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATASETS\vol_lpi_type.xss">
+      <DependentUpon>vol_lpi_type.xsd</DependentUpon>
+    </None>
+    <None Include="DATASETS\vol_reg.xsc">
+      <DependentUpon>vol_reg.xsd</DependentUpon>
+    </None>
+    <None Include="DATASETS\vol_reg.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vol_reg.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATASETS\vol_reg.xss">
+      <DependentUpon>vol_reg.xsd</DependentUpon>
+    </None>
+    <None Include="DATASETS\vol_sector.xsc">
+      <DependentUpon>vol_sector.xsd</DependentUpon>
+    </None>
+    <None Include="DATASETS\vol_sector.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vol_sector.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATASETS\vol_sector.xss">
+      <DependentUpon>vol_sector.xsd</DependentUpon>
+    </None>
+    <None Include="DATASETS\vol_sex.xsc">
+      <DependentUpon>vol_sex.xsd</DependentUpon>
+    </None>
+    <None Include="DATASETS\vol_sex.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vol_sex.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATASETS\vol_sex.xss">
+      <DependentUpon>vol_sex.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="2_vHC_1.ico" />
+    <None Include="Resources\notification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Accessibility">
+      <Guid>{1EA4DBF0-3C3B-11CF-810C-00AA00389B71}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CRAXDDRT">
+      <Guid>{846B7590-93DE-11D4-8C9F-00A0C9B7E1C1}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CRAXDRT">
+      <Guid>{B4741C00-45A6-11D1-ABEC-00A0C9274B91}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CRDESIGNERLib">
+      <Guid>{BD4B4E53-F7B8-11D0-964D-00A0C9273C2A}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CRPEAuto">
+      <Guid>{66589670-8F68-11D0-AA69-00A0C9274B91}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CRVIEWERLib">
+      <Guid>{C4847593-972C-11D0-9567-00A0C9273C2A}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Crystal">
+      <Guid>{00025600-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalReportWizard">
+      <Guid>{249C078F-28D3-11D3-B473-00A0C9B82368}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalTSLVLib">
+      <Guid>{F700A445-564C-4F70-AEBD-3E2708CD02AB}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="EXPORTMODELLERLib">
+      <Guid>{73C07740-98FD-4413-9716-C749192CF0CB}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

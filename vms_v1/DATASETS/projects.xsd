@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="projects" targetNamespace="http://tempuri.org/projects.xsd" xmlns:mstns="http://tempuri.org/projects.xsd" xmlns="http://tempuri.org/projects.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="projects" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="projects" msprop:Generator_UserDSName="projects">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="project_id" msprop:Generator_ColumnVarNameInTable="columnproject_id" msprop:Generator_ColumnPropNameInRow="project_id" msprop:Generator_ColumnPropNameInTable="project_idColumn" msprop:Generator_UserColumnName="project_id" type="xs:string" minOccurs="0" />
+              <xs:element name="host_org" msprop:Generator_ColumnVarNameInTable="columnhost_org" msprop:Generator_ColumnPropNameInRow="host_org" msprop:Generator_ColumnPropNameInTable="host_orgColumn" msprop:Generator_UserColumnName="host_org" type="xs:string" minOccurs="0" />
+              <xs:element name="proj_title" msprop:Generator_ColumnVarNameInTable="columnproj_title" msprop:Generator_ColumnPropNameInRow="proj_title" msprop:Generator_ColumnPropNameInTable="proj_titleColumn" msprop:Generator_UserColumnName="proj_title" type="xs:string" minOccurs="0" />
+              <xs:element name="proj_duration" msprop:Generator_ColumnVarNameInTable="columnproj_duration" msprop:Generator_ColumnPropNameInRow="proj_duration" msprop:Generator_ColumnPropNameInTable="proj_durationColumn" msprop:Generator_UserColumnName="proj_duration" type="xs:string" minOccurs="0" />
+              <xs:element name="mun_city" msprop:Generator_ColumnVarNameInTable="columnmun_city" msprop:Generator_ColumnPropNameInRow="mun_city" msprop:Generator_ColumnPropNameInTable="mun_cityColumn" msprop:Generator_UserColumnName="mun_city" type="xs:string" minOccurs="0" />
+              <xs:element name="prov_id" msprop:Generator_ColumnVarNameInTable="columnprov_id" msprop:Generator_ColumnPropNameInRow="prov_id" msprop:Generator_ColumnPropNameInTable="prov_idColumn" msprop:Generator_UserColumnName="prov_id" type="xs:string" minOccurs="0" />
+              <xs:element name="region_id" msprop:Generator_ColumnVarNameInTable="columnregion_id" msprop:Generator_ColumnPropNameInRow="region_id" msprop:Generator_ColumnPropNameInTable="region_idColumn" msprop:Generator_UserColumnName="region_id" type="xs:string" minOccurs="0" />
+              <xs:element name="bugdet" msprop:Generator_ColumnVarNameInTable="columnbugdet" msprop:Generator_ColumnPropNameInRow="bugdet" msprop:Generator_ColumnPropNameInTable="bugdetColumn" msprop:Generator_UserColumnName="bugdet" type="xs:string" minOccurs="0" />
+              <xs:element name="source_fund" msprop:Generator_ColumnVarNameInTable="columnsource_fund" msprop:Generator_ColumnPropNameInRow="source_fund" msprop:Generator_ColumnPropNameInTable="source_fundColumn" msprop:Generator_UserColumnName="source_fund" type="xs:string" minOccurs="0" />
+              <xs:element name="objective" msprop:Generator_ColumnVarNameInTable="columnobjective" msprop:Generator_ColumnPropNameInRow="objective" msprop:Generator_ColumnPropNameInTable="objectiveColumn" msprop:Generator_UserColumnName="objective" type="xs:string" minOccurs="0" />
+              <xs:element name="target_benificiaries" msprop:Generator_ColumnVarNameInTable="columntarget_benificiaries" msprop:Generator_ColumnPropNameInRow="target_benificiaries" msprop:Generator_ColumnPropNameInTable="target_benificiariesColumn" msprop:Generator_UserColumnName="target_benificiaries" type="xs:string" minOccurs="0" />
+              <xs:element name="date_start" msprop:Generator_ColumnVarNameInTable="columndate_start" msprop:Generator_ColumnPropNameInRow="date_start" msprop:Generator_ColumnPropNameInTable="date_startColumn" msprop:Generator_UserColumnName="date_start" type="xs:string" minOccurs="0" />
+              <xs:element name="date_end" msprop:Generator_ColumnVarNameInTable="columndate_end" msprop:Generator_ColumnPropNameInRow="date_end" msprop:Generator_ColumnPropNameInTable="date_endColumn" msprop:Generator_UserColumnName="date_end" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
